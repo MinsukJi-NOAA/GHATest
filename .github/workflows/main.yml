@@ -7,6 +7,8 @@ jobs:
     name: std
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v2
       - shell: bash
         run: |
           sed -i '3s/.*/STD/' main.txt
@@ -15,6 +17,8 @@ jobs:
     name: debug
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v2
       - shell: bash
         run: |
           sed -i '3s/.*/DEBUG/' main.txt
@@ -23,6 +27,8 @@ jobs:
     name: 32bit
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v2
       - shell: bash
         run: |
           sed -i '3s/.*/32BIT/' main.txt
