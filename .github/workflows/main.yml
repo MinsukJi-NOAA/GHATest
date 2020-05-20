@@ -33,3 +33,4 @@ jobs:
         run: |
           sed -i '3s/.*/32BIT/' main.txt
           cat main.txt
+          exit 1
