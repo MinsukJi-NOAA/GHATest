@@ -1,0 +1,29 @@
+name: github actions test
+
+on: [push, pull_request]
+
+jobs:
+  job_1:
+    name: std
+    runs-on: ubuntu-latest
+    steps:
+      - shell: bash
+        run: |
+          sed -i '3s/.*/STD/' main.txt
+          cat main.txt
+  job_2:
+    name: debug
+    runs-on: ubuntu-latest
+    steps:
+      - shell: bash
+        run: |
+          sed -i '3s/.*/DEBUG/' main.txt
+          cat main.txt
+  job_3:
+    name: 32bit
+    runs-on: ubuntu-latest
+    steps:
+      - shell: bash
+        run: |
+          sed -i '3s/.*/32BIT/' main.txt
+          cat main.txt
