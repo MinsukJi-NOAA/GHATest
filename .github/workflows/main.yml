@@ -19,16 +19,17 @@ jobs:
           echo '*****************'
           echo ${GITHUB_EVENT_PATH}
           echo '*****************'
-          ls -al /github/home
+          ls -al ${HOME}
           echo '*****************'
-          ls -al /github/workspace
+          ls -al ${GITHUB_WORKSPACE}
           echo '*****************'
-          ls -al /github/workflow
+          ls -al ${GITHUB_EVENT_PATH}
           echo '*****************'
           ls -al /
           echo '*****************'
           ls -al /mnt
           echo '*****************'
+          ls -al /var/lib/
           echo '*****************'
           echo '*****************'
           echo '*****************'
