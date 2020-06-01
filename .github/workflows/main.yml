@@ -9,28 +9,30 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - shell: bash
+      - name: tests
+        shell: bash
         run: |
-          sed -i '3s/.*/STD/' main.txt
-          cat main.txt
-  job_2:
-    name: debug
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v2
-      - shell: bash
-        run: |
-          sed -i '3s/.*/DEBUG/' main.txt
-          cat main.txt
-  job_3:
-    name: 32bit
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v2
-      - shell: bash
-        run: |
-          sed -i '3s/.*/32BIT/' main.txt
-          cat main.txt
-          exit 1
+          df -h
+          echo ${HOME}
+          echo '*****************'
+          echo ${GITHUB_WORKSPACE}
+          echo '*****************'
+          echo ${GITHUB_EVENT_PATH}
+          echo '*****************'
+          ls -al /github/home
+          echo '*****************'
+          ls -al /github/workspace
+          echo '*****************'
+          ls -al /github/workflow
+          echo '*****************'
+          ls -al /
+          echo '*****************'
+          ls -al /mnt
+          echo '*****************'
+          echo '*****************'
+          echo '*****************'
+          echo '*****************'
+          echo '*****************'
+          echo '*****************'
+          echo '*****************'
+          echo '*****************'
